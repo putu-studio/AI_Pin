@@ -1,0 +1,26 @@
+# Secrets: copy the .example files and fill in your own values
+firmware/main/secrets.h
+relay/.env
+
+# ESP-IDF build output and generated config
+firmware/build/
+firmware/managed_components/
+firmware/sdkconfig
+firmware/sdkconfig.old
+
+# Python
+relay/.venv/
+__pycache__/
+*.pyc
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# KiCad local files
+*.lck
+*.kicad_prl
+*-backups/
+fp-info-cache

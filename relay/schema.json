@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "answer",
+        "list",
+        "saved",
+        "error",
+        "needs_web"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 21,
+      "pattern": "^[\\x20-\\x7E]*$"
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 21,
+        "pattern": "^[\\x20-\\x7E]*$"
+      },
+      "maxItems": 11
+    },
+    "query": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "more": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 21,
+        "pattern": "^[\\x20-\\x7E]*$"
+      },
+      "maxItems": 40
+    },
+    "asked": {
+      "type": "string",
+      "maxLength": 50,
+      "pattern": "^[\\x20-\\x7E]*$"
+    }
+  },
+  "required": [
+    "kind",
+    "title",
+    "lines"
+  ],
+  "additionalProperties": false
+}
